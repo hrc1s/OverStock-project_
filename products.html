@@ -1,0 +1,145 @@
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+      }
+      h1 > span {
+        font-size: 94px;
+      }
+      select {
+        /* height: 30px !important; */
+        color: #333;
+        background-color: #f2f2f2;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        padding: 8px;
+        border: 1px solid #ccc;
+        width: 23%;
+      }
+      #heroSection {
+        height: 100vh;
+        background-image: url("https://ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?imwidth=1200&impolicy=custom");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #heroSection > img {
+        width: 100%;
+      }
+      .discount-card {
+        display: flex;
+        align-items: center;
+        width: 500px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.558);
+        text-align: center;
+        margin: auto;
+        color: white;
+      }
+      .discount-card > h1 {
+        font-size: 34px;
+        font-family: "Roboto", sans-serif;
+      }
+      #products-list {
+        padding: 2%;
+        padding-bottom: 10%;
+      }
+      .filters {
+        width: 95%;
+        text-align: end;
+      }
+      #products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 90%;
+        gap: 2%;
+        justify-content: flex-end;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10%;
+      }
+      #products > div {
+        /* box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.315); */
+        padding: 10px 10px;
+        border: 0.5px solid black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        cursor: pointer;
+      }
+      #products > div:hover {
+        box-shadow: -6px 8px 0px 4px rgba(0, 0, 0, 0.315);
+        width: 100%;
+        transition-duration: 0.5s;
+      }
+      #products > div > img {
+        width: 100%;
+      }
+      #products > div > button {
+        margin-top: auto;
+        background-color: black;
+        height: 35px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      #products > div > button:hover {
+        background-color: white;
+        color: black;
+        transition-duration: 0.5s;
+      }
+      .prod-price {
+        font-size: 22px;
+        font-weight: 500;
+        text-align: left;
+      }
+      .prod-price > span {
+        margin-left: 10px;
+        font-size: 14px;
+        color: red;
+        font-weight: 700;
+      }
+      .prod-name {
+        font-size: 14px;
+        text-align: left;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="heroSection">
+      <div class="discount-card">
+        <h1>
+          EXTRA <br /><span class="10off">10%</span> <br />OFF SELECT SOFAS AND
+          COUCHES*
+        </h1>
+      </div>
+    </section>
+    <section id="products-list">
+      <div class="filters">
+        <select name="" id="sortByName" onchange="sortByName()">
+          <option value="">Alphabetical</option>
+          <option value="AtZ">A-Z</option>
+          <option value="ZtA">Z-A</option>
+        </select>
+        <select name="" id="sortByPrice" onchange="sortByPrice()">
+          <option value="">Price</option>
+          <option value="htl">High - Low</option>
+          <option value="lth">Low - High</option>
+        </select>
+      </div>
+      <div id="products"></div>
+    </section>
+  </body>
+</html>
+<script src="./scripts/products.js"></script>

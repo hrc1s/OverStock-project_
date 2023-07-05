@@ -1,0 +1,155 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Roboto";
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    h3 > span {
+      font-size: 1rem;
+      color: red;
+      text-decoration: none !important;
+      margin-left: 30px;
+      border: 3px solid red;
+      padding: 10px;
+    }
+    #productSection {
+      margin-top: 2%;
+    }
+    #productSection > div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      gap: 40px;
+      margin: auto;
+    }
+    #productSection > div > div > button {
+      margin-top: auto;
+      background-color: black;
+      height: 40px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #productSection > div > div > button:hover {
+      background-color: white;
+      color: black;
+      transition-duration: 0.5s;
+    }
+    #productSection > div > div {
+      display: flex;
+      flex-direction: column;
+      padding: 0% 10%;
+    }
+    #products-list {
+      padding: 2%;
+      padding-bottom: 10%;
+    }
+    #category > h1 {
+      margin-left: 5%;
+    }
+    #sameCategory {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 90%;
+      gap: 2%;
+      justify-content: flex-end;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20%;
+    }
+    #sameCategory > div {
+      /* box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.315); */
+      padding: 10px 10px;
+      border: 0.5px solid black;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      cursor: pointer;
+    }
+    #sameCategory > div:hover {
+      box-shadow: -6px 8px 0px 4px rgba(0, 0, 0, 0.315);
+      width: 100%;
+      transition-duration: 0.5s;
+    }
+    #sameCategory > div > img {
+      width: 100%;
+    }
+    #sameCategory > div > button {
+      margin-top: auto;
+      background-color: black;
+      height: 35px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #sameCategory > div > button:hover {
+      background-color: white;
+      color: black;
+      transition-duration: 0.5s;
+    }
+    .prod-price {
+      font-size: 22px;
+      font-weight: 500;
+      text-align: left;
+    }
+    .prod-price > span {
+      margin-left: 10px;
+      font-size: 14px;
+      color: red;
+      font-weight: 700;
+    }
+    .prod-name {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .free-shipping {
+        display: flex;
+        justify-content: center;
+    }
+  </style>
+  <body>
+    <section id="productSection"></section>
+    <hr />
+    <section id="category">
+      <h1>Similar Products</h1>
+      <div id="sameCategory"></div>
+    </section>
+    <!-- <section id="shipping">
+      <div class="container" style="margin-top: 20%;">
+        <div class="free-shipping">
+            <i class="fa-sharp fa-solid fa-truck-fast fa-beat-fade fa-2xl"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </section> -->
+  </body>
+</html>
+<script src="./scripts/product-details.js"></script>
