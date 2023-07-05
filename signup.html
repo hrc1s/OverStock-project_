@@ -3,19 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user-add.css' rel='stylesheet'>
     <title>Sign Up</title>
 </head>
+<style>
+    section{
+        width: 70%;
+        margin: auto;
+    }
+    svg{
+        padding-top: 5px;
+    }
+    #top-part{
+        display: flex;
+
+    }
+    #ti{
+        display: flex;
+        width: 70%;
+        margin: auto;
+    }
+    .vl {
+        border-left: 2px solid gray;
+        height: 300px;
+        padding: 50px;
+    }
+    button{
+        padding-right: 119px;
+        text-align: center;
+    }
+</style>
 <body>
-    <div id="main">
-        <section id="left">
-            <input type="text" name="" id="">
-            <input type="password" name="" id="">
-            ::after
-        </section>
-        <section id="right">
-            <input type="text" name="" id="">
-            <input type="password" name="" id="">
-        </section>
+    <div id="ti">
+        <section>
+        <div id="top-part">
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg" >
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z"
+                fill="currentColor"
+            />
+            <path
+                d="M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z"
+                fill="currentColor"
+            />
+            <path d="M18 7H20V9H22V11H20V13H18V11H16V9H18V7Z" fill="currentColor" />
+        </svg>
+        <h2>Create Account</h2>
+        </div>
+        <form>
+            <input type="email" name="email" id="email" placeholder="Email"> <br><br>
+            <input type="password" name="password" id="password"  placeholder="Password"><br><br>
+            <button>Sign Up</button>
+        </form><br>
+        <div class="hp"><div class="cl-form-checkbox hr"><input checked="" id="checkbox-register" name="checkbox-register" type="checkbox" value="on" animation="" class="cl-form-checkbox-input"><label class="cl-form-checkbox-label cl-form-checkbox--animation" for="checkbox-register">Keep me signed in.</label></div><div data-cl-tracking="tooltip_5.5.1" class="cl-tooltip-wrapper"><button id="tooltip-register-tooltip" type="button" class="cl-tooltip-hoverable-item bottom"><svg fill="#2f3337" height="24" stroke="#2f3337" viewBox="0 0 24 24" width="24" class="cl-icon ht"><title>Keep me signed in info icon</title><path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 8a1 1 0 100-2 1 1 0 000 2zm-1 10H9v-2h2v-4H9v-2h4v6h2v2h-4z" stroke="none" fill="inherit"></path></svg></button><div aria-describedby="tooltip-register-tooltip" class="cl-tooltip bottom"><div class="cl-tooltip-tip-text">By checking this box, you won't have to sign in as often on this device, making it easier for you to enjoy those great deals!</div></div></div></div>
+        <div class="cj">By creating an account, you agree to our<br> <a href="https://help.overstock.com/app/answers/detail/a_id/63" rel="noreferrer" target="_blank">Terms &amp; Conditions</a> and <a href="https://help.overstock.com/app/answers/detail/a_id/65" rel="noreferrer" target="_blank">Privacy Policy</a>.</div>
+    </section>
+    <div class="vl"></div>
+    <section>
+        <div id="top-part">
+        <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg" >
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z"
+                fill="currentColor"
+            />
+            <path
+                d="M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z"
+                fill="currentColor"
+            />
+            <path d="M18 7H20V9H22V11H20V13H18V11H16V9H18V7Z" fill="currentColor" />
+        </svg>
+        <h2>Login In</h2>
+        </div>
+        <form>
+            <input type="email" name="email" id="email" placeholder="Email"> <br><br>
+            <input type="password" name="password" id="password"  placeholder="Password"><br><br>
+            <button>Sign Up</button>
+        </form>
+        <label class="cl-form-checkbox-label cl-form-checkbox--animation" for="checkbox-login">Keep me signed in.</label>
+        <div class="cl"><a href="/resetRequest?TID=Xo:Link:ForgotPass:LoginModal" target="_parent">Forgot your password?</a></div>
+    </section>
     </div>
+    <div class="an"><button type="button" class="cl-button cl-button-lg cl-button-secondary fh" data-cl-tracking="button_5.5.1"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" class="fj"><path stroke-width="0" d="M14.2115 5.72628C16.1549 5.72509 18.036 6.41187 19.5216 7.66492L23.6826 3.70239C22.0853 2.22954 20.1667 1.14926 18.079 0.547287C15.9913 -0.0546857 13.7921 -0.161782 11.6558 0.234497C9.51954 0.630776 7.50503 1.51952 5.77216 2.8302C4.03929 4.14089 2.63577 5.83742 1.67297 7.78517L6.36401 11.401C6.9111 9.75122 7.96337 8.31544 9.3718 7.29698C10.7802 6.27852 12.4734 5.72901 14.2115 5.72628Z" fill="#D94F3D"></path><path stroke-width="0" d="M5.94031 13.9975C5.94149 13.1148 6.08456 12.2381 6.36405 11.4009L1.67302 7.78516C0.713465 9.71546 0.214111 11.8418 0.214111 13.9975C0.214111 16.1531 0.713465 18.2794 1.67302 20.2098L6.36405 16.594C6.08456 15.7568 5.94149 14.8801 5.94031 13.9975Z" fill="#F2C042"></path><path stroke-width="0" d="M27.6363 11.4525H14.2751V17.1787H21.8465C21.3961 18.7978 20.3641 20.1938 18.9484 21.0992L23.6031 24.6877C26.5776 22.018 28.3253 17.6769 27.6363 11.4525Z" fill="#5085ED"></path><path stroke-width="0" d="M18.9464 21.0992C17.5079 21.9226 15.8679 22.3276 14.2115 22.2687C12.4734 22.2659 10.7802 21.7164 9.37179 20.698C7.96337 19.6795 6.9111 18.2437 6.36401 16.594L1.67297 20.2098C2.83167 22.5455 4.61907 24.5116 6.83416 25.8869C9.04924 27.2623 11.6041 27.9923 14.2115 27.9949C17.6423 28.0881 20.9865 26.9097 23.6012 24.6864L18.9464 21.0992Z" fill="#57A75C"></path></svg>Continue with Google</button><button type="button" class="cl-button cl-button-lg cl-button-secondary es" data-cl-tracking="button_5.5.1"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" class="eu"><path d="M14.5 28C22.232 28 28.5 21.732 28.5 14C28.5 6.26801 22.232 0 14.5 0C6.76801 0 0.5 6.26801 0.5 14C0.5 21.732 6.76801 28 14.5 28Z" fill="white"></path><path stroke="#1877F2" stroke-width="1.25" d="M19.9497 18.0466L20.5705 14H16.6877V11.3741C16.6877 10.2669 17.23 9.18767 18.969 9.18767H20.7343V5.74245C19.6978 5.57472 18.6505 5.48317 17.6007 5.46854C14.4026 5.46854 12.3124 7.40662 12.3124 10.9158V14H8.75757V18.0466H12.3124V27.8296C13.7619 28.0568 15.2381 28.0568 16.6877 27.8296V18.0466H19.9497Z" fill="#1877F2"></path></svg>Continue with Facebook</button></div>
+    
+       
+    
 </body>
 </html>
+
+
+
