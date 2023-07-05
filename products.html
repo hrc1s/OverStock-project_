@@ -114,6 +114,38 @@
         text-align: left;
         margin-top: 0;
       }
+
+      @media only screen and (max-width: 600px) {
+        #products {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px;
+        }
+        .discount-card {
+          width: 100%;
+        }
+        select {
+          width: 47%;
+        }
+      }
+      @media only screen and (min-width: 601px) and (max-width: 991px) {
+        #products {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        .discount-card {
+          width: 80%;
+          margin: auto;
+        }
+        h1 {
+          text-align: center;
+          margin: auto;
+        }
+        select {
+          width: 47%;
+        }
+      }
     </style>
   </head>
   <body>

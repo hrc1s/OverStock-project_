@@ -1,4 +1,4 @@
-const products = [
+const productsData = [
   {
     img: "https://ak1.ostkcdn.com/images/products/is/images/direct/5815823c37c7ef667df605e6d6f99c047026c0e0/Modern-3-Seat-Sofa-Removable-Cushions-Couch-for-Living-Room-with-2-Throw-Pillows-and-Side-Hidden-Storage-Bags.jpg?imwidth=480&impolicy=medium",
     id: 1,
@@ -181,13 +181,15 @@ const products = [
   },
 ];
 
+localStorage.setItem("all-products", JSON.stringify(productsData))
+let products = JSON.parse(localStorage.getItem("all-products"))
 console.log(products);
 
 let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
 console.log(cartList);
 
 let selectedCategory = JSON.parse(localStorage.getItem("selected-category"));
-
+console.log(selectedCategory)
 window.addEventListener("load", function () {
   displayProducts(products);
 });
