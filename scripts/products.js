@@ -181,22 +181,38 @@ const productsData = [
   },
 ];
 
-localStorage.setItem("all-products", JSON.stringify(productsData))
-let products = JSON.parse(localStorage.getItem("all-products"))
+localStorage.setItem("all-products", JSON.stringify(productsData));
+let products = JSON.parse(localStorage.getItem("all-products"));
 console.log(products);
 
 let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
 console.log(cartList);
 
 let selectedCategory = JSON.parse(localStorage.getItem("selected-category"));
-console.log(selectedCategory)
+console.log(selectedCategory);
 window.addEventListener("load", function () {
   displayProducts(products);
 });
 
+let categoryName = document.getElementById("category-name");
+// categoryName.textContent = selectedCategory.name;
+
 let parentDiv = document.getElementById("products");
 let title = document.querySelector("title");
-title.textContent = selectedCategory.name
+// title.textContent = selectedCategory.name;
+
+let nsForm = document.querySelector("#newsletterForm");
+
+nsForm.addEventListener("submit", function () {
+  // event.preventDefault();
+  let email = nsForm.email.value;
+  if (email == "") {
+    alert("Cannot be empty")
+  }
+  else {
+    alert(`Your email: ${email}, has been saved.`);
+  }
+});
 
 function sortByName() {
   let option = document.getElementById("sortByName").value;
@@ -281,7 +297,7 @@ function displayProducts(arr) {
         atcBtn.textContent = "Add to Cart";
         atcBtn.style.backgroundColor = "";
         atcBtn.style.color = "";
-        atcBtn.style.transitionDuration = "0.5s"
+        atcBtn.style.transitionDuration = "0.5s";
       }, 2000);
     });
 
@@ -297,7 +313,7 @@ function displayProducts(arr) {
           category: el.category,
         })
       );
-      window.location.href = "product-details.html"
+      window.location.href = "product-details.html";
       console.log(localStorage.getItem("selected-product"));
     });
 

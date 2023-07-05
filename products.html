@@ -9,146 +9,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-      }
-      h1 > span {
-        font-size: 94px;
-      }
-      select {
-        /* height: 30px !important; */
-        color: #333;
-        background-color: #f2f2f2;
-        font-size: 14px;
-        font-family: Arial, sans-serif;
-        padding: 8px;
-        border: 1px solid #ccc;
-        width: 23%;
-      }
-      #heroSection {
-        height: 100vh;
-        background-image: url("https://ak1.ostkcdn.com/img/mxc/09142020_FALLEGREEN_057z_SofasandCouches_AMOD.jpg?imwidth=1200&impolicy=custom");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      #heroSection > img {
-        width: 100%;
-      }
-      .discount-card {
-        display: flex;
-        align-items: center;
-        width: 500px;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.558);
-        text-align: center;
-        margin: auto;
-        color: white;
-      }
-      .discount-card > h1 {
-        font-size: 34px;
-        font-family: "Roboto", sans-serif;
-      }
-      #products-list {
-        padding: 2%;
-        padding-bottom: 10%;
-      }
-      .filters {
-        width: 95%;
-        text-align: end;
-      }
-      #products {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        width: 90%;
-        gap: 2%;
-        justify-content: flex-end;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 10%;
-      }
-      #products > div {
-        /* box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.315); */
-        padding: 10px 10px;
-        border: 0.5px solid black;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        cursor: pointer;
-      }
-      #products > div:hover {
-        box-shadow: -6px 8px 0px 4px rgba(0, 0, 0, 0.315);
-        width: 100%;
-        transition-duration: 0.5s;
-      }
-      #products > div > img {
-        width: 100%;
-      }
-      #products > div > button {
-        margin-top: auto;
-        background-color: black;
-        height: 35px;
-        color: white;
-        font-weight: 600;
-        cursor: pointer;
-      }
-      #products > div > button:hover {
-        background-color: white;
-        color: black;
-        transition-duration: 0.5s;
-      }
-      .prod-price {
-        font-size: 22px;
-        font-weight: 500;
-        text-align: left;
-      }
-      .prod-price > span {
-        margin-left: 10px;
-        font-size: 14px;
-        color: red;
-        font-weight: 700;
-      }
-      .prod-name {
-        font-size: 14px;
-        text-align: left;
-        margin-top: 0;
-      }
-
-      @media only screen and (max-width: 600px) {
-        #products {
-          display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          gap: 20px;
-        }
-        .discount-card {
-          width: 100%;
-        }
-        select {
-          width: 47%;
-        }
-      }
-      @media only screen and (min-width: 601px) and (max-width: 991px) {
-        #products {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
-        }
-        .discount-card {
-          width: 80%;
-          margin: auto;
-        }
-        h1 {
-          text-align: center;
-          margin: auto;
-        }
-        select {
-          width: 47%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./styles/products.css" />
   </head>
   <body>
+    <header>
+      <div id="navbar">
+        <div>
+          <a href="index.html">
+            <img
+              id="logo"
+              src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Outdoor</a></li>
+            <li><a href="#">Rugs</a></li>
+            <li><a href="#">Decor</a></li>
+            <li><a href="#">Bedding</a></li>
+            <li><a href="#">Home Improvement</a></li>
+            <li><a href="#">Kitchen</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="#">Kids & Baby</a></li>
+            <li><a href="#">Bath</a></li>
+            <li><a href="#">More</a></li>
+            <li><a href="#">Ideas</a></li>
+          </ul>
+        </nav>
+
+        <div id="btns">
+          <button class="dropdown-btn">
+            <img
+              id="user-img"
+              src="https://cdn-icons-png.flaticon.com/128/747/747376.png"
+              alt=""
+            />
+            <p>Acc</p>
+            <div class="dropdown-content">
+              <a href="login.html">Login</a>
+              <a href="signup.html">Sign up</a>
+            </div>
+          </button>
+          <button>
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+              alt=""
+            />
+            <p>Fav</p>
+          </button>
+          <button>
+            <a href="cart.html"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png"
+                alt=""
+              />
+            </a>
+            <p>Cart</p>
+          </button>
+        </div>
+      </div>
+    </header>
+
     <section id="heroSection">
       <div class="discount-card">
         <h1>
@@ -158,20 +83,79 @@
       </div>
     </section>
     <section id="products-list">
-      <div class="filters">
-        <select name="" id="sortByName" onchange="sortByName()">
-          <option value="">Alphabetical</option>
-          <option value="AtZ">A-Z</option>
-          <option value="ZtA">Z-A</option>
-        </select>
-        <select name="" id="sortByPrice" onchange="sortByPrice()">
-          <option value="">Price</option>
-          <option value="htl">High - Low</option>
-          <option value="lth">Low - High</option>
-        </select>
+      <div id="top">
+        <h1 id="category-name">Category Name</h1>
+        <div class="filters">
+          <select name="" id="sortByName" onchange="sortByName()">
+            <option value="">Alphabetical</option>
+            <option value="AtZ">A-Z</option>
+            <option value="ZtA">Z-A</option>
+          </select>
+          <select name="" id="sortByPrice" onchange="sortByPrice()">
+            <option value="">Price</option>
+            <option value="htl">High - Low</option>
+            <option value="lth">Low - High</option>
+          </select>
+        </div>
       </div>
       <div id="products"></div>
     </section>
+    <section id="newsletter">
+      <div class="container">
+        <img
+          src="https://ak1.ostkcdn.com/img/mxc/7722_EmailCoupon.svg"
+          alt=""
+          class="letter"
+        />
+        <div class="text-container">
+          <h3 class="sign-up-ns">
+            Sign Up for our weekly <br />newsletter and get rewards
+          </h3>
+        </div>
+        <form action="" id="newsletterForm">
+          <input type="email" id="email">
+          <input type="submit" value="Sign Up">
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div id="footer-upper">
+        <div>
+          <h3>MY ACCOUNT</h3>
+          <p>Orders & Returns</p>
+          <p>Email Preferences</p>
+          <p>Account Settings</p>
+        </div>
+        <div>
+          <h3>LET US HELP</h3>
+          <p>Contact Customer Care</p>
+          <p>Shipping Information</p>
+          <p>Return Policy</p>
+          <p>International Help</p>
+          <p>Accessibility</p>
+        </div>
+        <div>
+          <h3>COMPANY INFORMATION</h3>
+          <p>About Overstock™</p>
+          <p>Contact Us</p>
+          <p>Careers</p>
+          <p>Investor Relations</p>
+          <p>Sell Your Products</p>
+          <p>Supply Chain Transparency</p>
+        </div>
+        <div>
+          <h3>MORE WAYS TO SHOP</h3>
+          <p>Tips & Ideas</p>
+          <p>Deals</p>
+          <p>Clearance</p>
+          <p>New Arrivals</p>
+        </div>
+      </div>
+      <div id="footer-lower">
+        <div>© Copyright 2023, Overstock.com®</div>
+        <div>Privacy Policy Terms & Conditions *Promotion Terms</div>
+      </div>
+    </footer>
   </body>
 </html>
 <script src="./scripts/products.js"></script>
