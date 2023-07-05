@@ -1,10 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <title>Document</title>
+<head>   
+    <title>Cart</title>
+    <style>
+        .empty{
+            width: 800.6px;
+            height: 80px;
+            border: 1px solid #dadcdf;
+            padding: 25px 40px;
+            margin: 20px 150px 0px;
+            text-align: center;
+
+        }
+        .empty>p{
+            font-size: 24px;
+            font-weight: 400;
+            color: #2f3337;
+            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        h2{
+            font-size: 24px;
+            font-weight: 400;
+            margin: 0px 151px 0px;
+        }
+        
+        .costing div:nth-child(1){    
+            border: 1px solid #dadcdf;
+            width: 280px;
+            height: 60px;
+            padding: 0px 0px 0px 0px;
+            margin: -131px 0px 0px 1050px;
+            
+        }
+        button{
+            background-color: white;
+            border: 0px;
+            padding: 16px 0px 0px 0px;
+            margin: 0px 0px 0px 15px;
+            font-size: 18px;
+            font-weight: 700;     
+            color: #333333;      
+        }
+        .costing div:nth-child(2){
+            border: 1px solid #dadcdf;
+            width: 280px;
+            height: 150px;
+            padding: 0px 0px 0px 0px;
+            margin: 7px  0px 0px 1050px;
+        }
+        p+button{
+            width: 220px;
+            height: 40px;
+            align-items: center;
+            background-color: #2f3337;
+            color: #fff;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding: 0px 0px 0px 0px;
+            margin: 10px 0px 0px 22px;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .costing div p:nth-child(2){
+            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 15px 0px 0px 22px;
+            color: #2f3337;
+            
+        }
+        .costing div p:nth-child(1){
+            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 15px 0px 0px 22px;
+            color: #2f3337;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        #promo{
+            margin: 0px 0px 0px 8px; 
+            text-align: center;
+            line-height: 1.42857143;
+        }
+    </style>
 </head>
 <body>
-    <p>This is my cart page</p>
+    <h2>Shopping Cart</h2>
+    <div class="empty">
+        <p>Your shopping cart is empty.</p>
+    </div>
+
+    <div class="costing">
+         <div>
+            <button type="button"><img src="./plus.png" alt="plus icon"><span id="promo">  Add a Promo Code</span></button>
+         </div>
+         <div>
+            <p>(<span>0</span>) items</p>
+            <p>Your Total:</p>
+            <button type="button">Continue Shopping</button>
+         </div>
+    </div>
+
+    <!-- div to append Cart obj-->
+    <div>
+
+    </div>
+
+    <!-- div to append Things We Know You'll Love ⭐-->
+    <div id="things">
+         
+    </div>
+
+    <!-- div to append Recently Viewed-->
+    <div>
+
+    </div>
+
 </body>
 </html>
+<script src="./cart.js">
+
+</script>
