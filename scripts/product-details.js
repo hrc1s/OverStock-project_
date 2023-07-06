@@ -384,7 +384,7 @@ window.addEventListener("load", function () {
 });
 
 let title = document.querySelector("title");
-// title.textContent = selectedProduct.name;
+title.textContent = selectedProduct.name;
 
 let parentProduct = document.getElementById("productSection");
 let parentCategory = document.getElementById("sameCategory");
@@ -416,9 +416,9 @@ function displayProduct(product) {
   description.style.fontSize = "18px";
   description.style.marginBottom = "0";
 
-  if (product.category == "sofa") {
-    prodPrice.append(off);
-  }
+  // if (product.category == "sofa") {
+  //   prodPrice.append(off);
+  // }
 
   addToCart.addEventListener("click", function () {
     cartList.push(product);
@@ -470,7 +470,7 @@ function displayCategory(arr) {
     let prodPrice = document.createElement("p");
     let prodName = document.createElement("p");
     let addToCart = document.createElement("button");
-    let off = document.createElement("span");
+    // let off = document.createElement("span");
 
     prodName.setAttribute("class", "prod-name");
     prodPrice.setAttribute("class", "prod-price");
@@ -482,11 +482,11 @@ function displayCategory(arr) {
     });
     prodName.textContent = el.name;
     addToCart.textContent = "Add to cart";
-    off.textContent = "10%OFF";
+    // off.textContent = "10%OFF";
 
-    if (el.category == "sofa") {
-      prodPrice.append(off);
-    }
+    // if (el.category == "sofa") {
+    //   prodPrice.append(off);
+    // }
 
     addToCart.addEventListener("click", function (el) {
       cartList.push(el);
