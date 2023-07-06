@@ -375,7 +375,7 @@ button:hover {
 }
 /* Footer ends here */
 @media screen and (min-width: 800px) and (max-width: 1200px) {
-  #catergory {
+  #category {
     grid-template-columns: repeat(4, 1fr);
   }
   #footer-upper {
@@ -390,7 +390,7 @@ button:hover {
   }
 }
 @media screen and (min-width: 646px) and (max-width: 799px) {
-  #catergory {
+  #category {
     grid-template-columns: repeat(3, 1fr);
   }
   #footer-upper {
@@ -399,7 +399,7 @@ button:hover {
   }
 }
 @media screen and (min-width: 510px) and (max-width: 645px) {
-  #catergory {
+  #category {
     grid-template-columns: repeat(2, 1fr);
   }
 }
