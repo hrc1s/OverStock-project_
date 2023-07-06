@@ -286,6 +286,7 @@ h2 {
 #got-your-style h2,
 #got-your-style p {
   margin: 20px;
+  font-size: 2vh;
 }
 /* Things We Know You'll Love */
 #recommend-container {
@@ -299,6 +300,9 @@ h2 {
 }
 #recommend-container div {
   border: 1px solid gray;
+}
+#recommend-container h5 {
+  font-size: 16px;
 }
 #recommend-container > div:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -343,6 +347,9 @@ button:hover {
   margin: auto;
   border-top: 2px solid black;
 }
+.product-box > div h5 {
+  font-size: 16px;
+}
 .product-box > div:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition-duration: 0.5s;
@@ -372,6 +379,7 @@ button:hover {
   padding: 50px;
   display: flex;
   justify-content: space-evenly;
+  z-index: 20;
 }
 /* Footer ends here */
 @media screen and (min-width: 800px) and (max-width: 1200px) {
@@ -382,6 +390,13 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  #footer-upper div:last-child {
+    display: none;
+  }
+  #footer-lower div:last-child {
+    display: none;
+  }
+
   .swiper-slide h2,
   .swiper-slide p {
     padding: 0px 5px 0px 20px;
@@ -397,9 +412,39 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  #footer-upper div:last-child,
+  #footer-upper div:nth-child(3) {
+    display: none;
+  }
 }
-@media screen and (min-width: 510px) and (max-width: 645px) {
+@media screen and (min-width: 0px) and (max-width: 644px) {
+  #footer-upper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0px;
+  }
+  #footer-upper div:last-child,
+  #footer-upper div:nth-child(2),
+  #footer-upper div:nth-child(3) {
+    display: none;
+    padding: 0px;
+  }
+  #footer-lower div:last-child {
+    display: none;
+  }
+  h1 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 645px) {
   #category {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lt_deals_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #feat-brand {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -424,7 +469,27 @@ button:hover {
   .category-buttons {
     flex-wrap: wrap;
   }
+  .category-button {
+    font-size: 16px;
+  }
+  .product-box {
+    gap: 5px;
+  }
+  .product-box > div h3,
+  .product-box > div > h5 {
+    font-size: 12px;
+    padding: 0px;
+  }
+  .product-box > div h5:last-child {
+    display: none;
+  }
   .product-box {
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
+  #recommend-container > div h3 {
+    font-size: 14px;
+  }
+  #recommend-container > div > h5 {
+    font-size: 12px;
   }
 }

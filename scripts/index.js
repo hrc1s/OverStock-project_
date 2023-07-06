@@ -75,7 +75,7 @@ function display(products) {
     name.style.margin = 0;
     name.style.padding = "0px 10px 8px";
     name.style.color = "#444";
-    name.style.fontSize = "16px";
+    // name.style.fontSize = "16px";
     name.style.fontWeight = "lighter";
 
     div.addEventListener("click", function () {
@@ -308,7 +308,7 @@ function displayProducts(category) {
     name.style.margin = 0;
     name.style.padding = "0px 10px 0px";
     name.style.color = "#444";
-    name.style.fontSize = "16px";
+    // name.style.fontSize = "16px";
     name.style.fontWeight = "lighter";
     img.setAttribute("src", el.img);
     let rating = document.createElement("h5");
