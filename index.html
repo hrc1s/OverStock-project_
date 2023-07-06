@@ -76,13 +76,13 @@
 
       <nav>
         <ul>
-          <li><a href="#">Furniture</a></li>
-          <li><a href="#">Outdoor</a></li>
-          <li><a href="#">Rugs</a></li>
-          <li><a href="#">Decor</a></li>
           <li><a href="#">Bedding</a></li>
-          <li><a href="#">Home Improvement</a></li>
           <li><a href="#">Kitchen</a></li>
+          <li><a href="#">Sofa</a></li>
+          <li><a href="#">Patio</a></li>
+          <li><a href="#">Outdoor</a></li>
+          <li><a href="#">Decor</a></li>
+          <li><a href="#">Home Improvement</a></li>
           <li><a href="#">Lighting</a></li>
           <li><a href="#">Kids & Baby</a></li>
           <li><a href="#">Bath</a></li>
@@ -93,17 +93,38 @@
     </header>
     <!-- Header ends here -->
 
-    <div id="img-container">
-      <img
-        id="backImg"
-        src="https://ak1.ostkcdn.com/img/mxc/06012023-MOPS-1400x550_DSK-INTL.jpg"
-        alt="backImg"
-      />
-      <img
-        id="overImg"
-        src="https://ak1.ostkcdn.com/img/mxc/06012023-MOPS-1400x550_DSK-INTL.svg"
-        alt=""
-      />
+    <div class="swiper slideshow">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/07052023-MOPS-LazyLoad.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/A2-DSK_07.04-07.10.jpg"
+            alt=""
+          />
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/A2-DSK_07.04-07.10.svg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/A3-DSK_07.04-07.10.jpg"
+            alt=""
+          />
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/A3-DSK_07.04-07.10.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
     <!-- // Limited time deals -->
     <h1>Limited-Time Deals</h1>
@@ -181,6 +202,10 @@
         <h2>Select Bath</h2>
       </div>
     </div>
+
+    <!-- Things We Know You'll Love -->
+    <h1>Things We Know You'll Love</h1>
+    <div id="recommend-container"></div>
     <!-- //Beautiful Finds for Every Room -->
     <h1>Beautiful Finds for Every Room</h1>
     <div id="category">
@@ -191,33 +216,13 @@
         />
         <h4>Furniture</h4>
       </div>
-      <div>
-        <img
-          src="https://ak1.ostkcdn.com/img/mxc/02132023-MOPS-HP-Redesign-Frame2.jpg?imwidth=1080"
-          alt=""
-        />
-        <h4>Area Rugs</h4>
-      </div>
+
       <div>
         <img
           src="https://ak1.ostkcdn.com/img/mxc/02132023-MOPS-HP-Redesign-Frame3.jpg?imwidth=1080"
           alt=""
         />
         <h4>Bedding</h4>
-      </div>
-      <div>
-        <img
-          src="https://ak1.ostkcdn.com/img/mxc/02132023-MOPS-HP-Redesign-Frame4.jpg?imwidth=1080"
-          alt=""
-        />
-        <h4>Home Decor</h4>
-      </div>
-      <div>
-        <img
-          src="https://ak1.ostkcdn.com/img/mxc/05022023_window_treatments.jpg?imwidth=1080"
-          alt=""
-        />
-        <h4>Window Treatments</h4>
       </div>
       <div>
         <img
@@ -233,6 +238,21 @@
         />
         <h4>Outdoor</h4>
       </div>
+      <div>
+        <img
+          src="https://ak1.ostkcdn.com/img/mxc/02132023-MOPS-HP-Redesign-Frame4.jpg?imwidth=1080"
+          alt=""
+        />
+        <h4>Home Decor</h4>
+      </div>
+      <div>
+        <img
+          src="https://ak1.ostkcdn.com/img/mxc/05022023_window_treatments.jpg?imwidth=1080"
+          alt=""
+        />
+        <h4>Window Treatments</h4>
+      </div>
+
       <div>
         <img
           src="https://ak1.ostkcdn.com/img/mxc/02132023-MOPS-HP-Redesign-Frame8.jpg?imwidth=1080"
@@ -263,6 +283,13 @@
       </div>
       <div>
         <img
+          src="https://ak1.ostkcdn.com/img/mxc/02132023-MOPS-HP-Redesign-Frame2.jpg?imwidth=1080"
+          alt=""
+        />
+        <h4>Area Rugs</h4>
+      </div>
+      <div>
+        <img
           src="https://ak1.ostkcdn.com/img/mxc/04112023-MOPS-HP-shopalldeals.jpg?imwidth=1080"
           alt=""
         />
@@ -277,15 +304,6 @@
       <img
         id="sec"
         src="https://ak1.ostkcdn.com/img/mxc/06012023_1400x550_Promo1_LivingRoom_INTL.svg?imwidth=1200"
-      />
-    </div>
-    <div class="two-images">
-      <img
-        src="https://ak1.ostkcdn.com/img/mxc/06012023_1400x550_Promo2_Bedding_INTL.jpg?imwidth=1200"
-      />
-      <img
-        id="sec"
-        src="https://ak1.ostkcdn.com/img/mxc/06012023_1400x550_Promo2_Bedding_INTL.svg?imwidth=1200"
       />
     </div>
     <h1>Trending This Season</h1>
@@ -323,15 +341,56 @@
           <h2>4th of July</h2>
           <p>Get you home ready for independence day.</p>
         </div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/06052023_Home_Page_Editorial_5.jpg?imwidth=1920"
+            alt=""
+          />
+          <h2>Home bars</h2>
+          <p>
+            Serve up some serious style with mix-ready bars to match any look
+          </p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/06052023_Home_Page_Editorial_7.jpg?imwidth=1080"
+            alt=""
+          />
+          <h2>Sleeper Sofas</h2>
+          <p>
+            Shop Beautiful sofas that give guests a cozy place to spend the
+            night.
+          </p>
+        </div>
+        <div class="swiper-slide">
+          <img
+          src=https://ak1.ostkcdn.com/img/mxc/06052023_Home_Page_Editorial_8.jpg?imwidth=1920"
+          alt="" />
+          <h2>Buffets & Sideboards</h2>
+          <p>
+            Update your Dining room with cabinates that help you serve & store
+            in Style.
+          </p>
+        </div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
+    <!-- Shop Top-Rated Home Essentials -->
+    <h1>Shop Top-Rated Home Essentials</h1>
+
+    <div class="category-buttons">
+      <button class="category-button" data-category="bed">Bed</button>
+      <button class="category-button" data-category="sofa">Sofa</button>
+      <button class="category-button" data-category="kitchen">Kitchen</button>
+      <button class="category-button" data-category="patio">Patio</button>
+    </div>
+
+    <!-- Box to display products -->
+    <div class="product-box">
+      <!-- Products of the first category will be displayed here by default -->
+    </div>
+
     <!-- Overstock Featured Brands -->
     <h1>Overstock Featured Brands</h1>
     <div id="feat-brand">
@@ -368,9 +427,6 @@
         <p>Select Outdoor Furniture by Cambridge Casual</p>
       </div>
     </div>
-    <!-- <div id="local-img1-div">
-      <img id="local-img1" src="images/img1.png" alt="" />
-    </div> -->
     <h1>We've Got Your Style</h1>
     <div id="got-your-style">
       <div>

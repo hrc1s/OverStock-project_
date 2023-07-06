@@ -55,6 +55,7 @@ nav {
   background-color: white;
   padding: 0px 15px;
   border-bottom: 0.5px solid gray;
+  margin-bottom: -39px;
   font-size: 2vh;
 }
 
@@ -129,21 +130,32 @@ body {
   margin: 0;
   padding: 0;
 }
-
-#backImg,
-#overImg {
-  width: 100%;
-}
-#img-container {
-  position: relative;
+.swiper {
   width: 90%;
-  margin: auto;
+  height: 100%;
 }
-#overImg {
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide img:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
 }
+.slideshow .swiper-pagination-bullet {
+  background-color: red;
+}
+.swiper-pagination {
+  margin-bottom: -10px;
+}
+
 /* Limited time deals */
 .lt_deals_container {
   display: grid;
@@ -152,6 +164,7 @@ body {
   gap: 20px;
   grid-template-columns: repeat(6, 1fr);
   text-align: center;
+  margin-bottom: 60px;
 }
 .it_deals_container h2 {
   font-size: 90px;
@@ -181,6 +194,9 @@ h2 {
 #category img {
   width: 100%;
 }
+#category:hover {
+  cursor: pointer;
+}
 /* 2 images */
 .two-images {
   position: relative;
@@ -201,6 +217,7 @@ h2 {
   margin-top: 40px;
   width: 90%;
   height: 100%;
+  margin-bottom: 50px;
 }
 
 .swiper-slide {
@@ -218,7 +235,7 @@ h2 {
 .swiper-slide p {
   padding: 0px 5px 0px 20px;
   margin-bottom: 0;
-  font-size: 2.5vh;
+  font-size: 2vh;
 }
 
 .swiper-slide img {
@@ -249,16 +266,6 @@ h2 {
   margin: 5px;
 }
 
-#local-img1-div {
-  width: 90%;
-  margin: auto;
-  margin-top: 65px;
-  margin-bottom: 65px;
-}
-#local-img1 {
-  width: 100%;
-  height: 490px;
-}
 /* We've Got Your Style */
 #got-your-style {
   /* display: flex; */
@@ -280,6 +287,67 @@ h2 {
 #got-your-style p {
   margin: 20px;
 }
+/* Things We Know You'll Love */
+#recommend-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+#recommend-container div {
+  border: 1px solid gray;
+}
+#recommend-container > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+#recommend-container img {
+  width: 100%;
+}
+/* Shop Top-Rated Home Essentials */
+.category-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.category-button {
+  padding: 8px 12px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+  font-size: 25px;
+}
+button:hover {
+  border-bottom: 4px solid black;
+  background-color: rgb(245, 243, 243);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+.product-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.product-box img {
+  width: 100%;
+}
+.product-box {
+  width: 90%;
+  margin: auto;
+  border-top: 2px solid black;
+}
+.product-box > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
 
 /* Footer starts here */
 #footer-upper {
@@ -296,6 +364,7 @@ h2 {
 #footer-upper h3,
 #footer-upper p {
   color: white;
+  font-weight: lighter;
 }
 #footer-lower {
   background-color: #2f3337;
@@ -309,10 +378,24 @@ h2 {
   #catergory {
     grid-template-columns: repeat(4, 1fr);
   }
+  #footer-upper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .swiper-slide h2,
+  .swiper-slide p {
+    padding: 0px 5px 0px 20px;
+    margin-bottom: 0;
+    font-size: 1vh;
+  }
 }
 @media screen and (min-width: 646px) and (max-width: 799px) {
   #catergory {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #footer-upper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 510px) and (max-width: 645px) {
@@ -327,5 +410,21 @@ h2 {
   #got-your-style p {
     /* grid-template-columns: repeat(2, 1fr); */
     font-size: 1.7vh;
+  }
+  #search {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  #recommend-container {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
+}
+@media screen and (max-width: 612px) {
+  .category-buttons {
+    flex-wrap: wrap;
+  }
+  .product-box {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
   }
 }
