@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/user-add.css"
+      rel="stylesheet"
+    />
+    <title>Sign Up</title>
+  </head>
+  <style>
+    section {
+      width: 37%;
+      margin: auto;
+    }
+    #right-l {
+      padding-top: 1px;
+    }
+    .user-add-image {
+      padding-top: 15px;
+      padding-right: 12px;
+    }
+    #top-part {
+      display: flex;
+    }
+    #main {
+      display: flex;
+      width: 70%;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+    .vl {
+      border-left: 2px solid #dbdcde;
+      height: 350px;
+      padding: 1px;
+    }
+    button {
+      align-items: center;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: Helvetica\Neue, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      justify-content: center;
+      margin: 0;
+      padding: 0 16px;
+      position: relative;
+      text-decoration: none;
+      width: 108%;
+      height: 38px;
+    }
+    #login-btn {
+      background-color: #2f3337;
+      color: white;
+    }
+    #email,
+    #password {
+      width: 100%;
+      height: 30px;
+      font-size: 16px;
+      padding: 4px;
+      padding-left: 15px;
+    }
+    #Email,
+    #Password {
+      width: 100%;
+      height: 30px;
+      font-size: 16px;
+      padding: 4px;
+      padding-left: 15px;
+    }
+    #left {
+      margin-top: 68px;
+    }
+    button > svg {
+      margin: 7px;
+    }
+    button {
+      font-size: 16px;
+      height: 44px;
+    }
+    h2 {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 19px;
+    }
+    section > br + div {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 5px;
+    }
+    .terms {
+      width: 40%;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 50px;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    .terms a {
+      text-decoration: none;
+    }
+    .terms:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .av {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin: 8px 0 32px;
+      padding: 20px;
+    }
+    .av .ax {
+      background-color: gray;
+      height: 1px;
+      width: 35%;
+    }
+    .av .az {
+      color: #626669;
+      font-size: 20px;
+      margin: 0 24px;
+    }
+    .google {
+      width: 25%;
+      margin-left: 500px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      height: 44px;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-color: #2f3337;
+      color: #2f3337;
+    }
+  </style>
+  <body>
+    <div id="main">
+      <!-- SIGN UP START -->
+      <section id="left">
+        <div id="top-part">
+          <svg
+            class="user-add-image"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z"
+              fill="currentColor"
+            />
+            <path
+              d="M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z"
+              fill="currentColor"
+            />
+            <path
+              d="M18 7H20V9H22V11H20V13H18V11H16V9H18V7Z"
+              fill="currentColor"
+            />
+          </svg>
+          <h2>Create Account</h2>
+        </div>
+        <form>
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <br /><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          /><br /><br />
+          <button type="submit" data-cl-tracking="button_5.5.1">
+            <svg
+              fill="#2f3337"
+              height="24"
+              stroke="#2f3337"
+              viewBox="0 0 24 24"
+              width="24"
+              class="cl-icon hf"
+            >
+              <title>Lock</title>
+              <path
+                d="M12 1a4.95 4.95 0 00-5 5v3h10V6a4.95 4.95 0 00-5-5zM19 9H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V11a2 2 0 00-2-2z"
+                stroke="inherit"
+                fill="none"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12 17a2 2 0 100-4 2 2 0 000 4zM12 17v2"
+                stroke="inherit"
+                fill="none"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path></svg
+            >Create Account
+          </button>
+        </form>
+        <br />
+      </section>
+      <div class="vl"></div>
+      <!-- SIGN UP END -->
+
+      <!-- LOGIN START -->
+      <section id="right-l">
+        <div id="top-part">
+          <svg
+            class="user-add-image"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z"
+              fill="currentColor"
+            />
+            <path
+              d="M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z"
+              fill="currentColor"
+            />
+            <path
+              d="M18 7H20V9H22V11H20V13H18V11H16V9H18V7Z"
+              fill="currentColor"
+            />
+          </svg>
+          <h2>Sign In</h2>
+        </div>
+        <form id="form2">
+          <input type="email" name="email" id="Email" placeholder="Email" />
+          <br /><br />
+          <input
+            type="password"
+            name="password"
+            id="Password"
+            placeholder="Password"
+          /><br /><br />
+          <button type="submit" id="login-btn">
+            <svg
+              fill="#2f3337"
+              height="24"
+              stroke="#FFFEFE"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <title>Lock</title>
+              <path
+                d="M12 1a4.95 4.95 0 00-5 5v3h10V6a4.95 4.95 0 00-5-5zM19 9H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V11a2 2 0 00-2-2z"
+                stroke="inherit"
+                fill="none"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12 17a2 2 0 100-4 2 2 0 000 4zM12 17v2"
+                stroke="inherit"
+                fill="none"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path></svg
+            >Sign In
+          </button>
+        </form>
+      </section>
+      <!-- LOGIN END -->
+    </div>
+    <div class="terms">
+      By creating an account, you agree to our<br />
+      <a
+        href="https://help.overstock.com/app/answers/detail/a_id/63"
+        rel="noreferrer"
+        target="_blank"
+        >Terms &amp; Conditions</a
+      >
+      and
+      <a
+        href="https://help.overstock.com/app/answers/detail/a_id/65"
+        rel="noreferrer"
+        target="_blank"
+        >Privacy Policy</a
+      >.
+    </div>
+    <div class="av">
+      <div class="ax"></div>
+      <div class="az">OR</div>
+      <div class="ax"></div>
+    </div>
+    <button type="button" class="google" data-cl-tracking="button_5.5.1">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" class="fj">
+        <path
+          stroke-width="0"
+          d="M14.2115 5.72628C16.1549 5.72509 18.036 6.41187 19.5216 7.66492L23.6826 3.70239C22.0853 2.22954 20.1667 1.14926 18.079 0.547287C15.9913 -0.0546857 13.7921 -0.161782 11.6558 0.234497C9.51954 0.630776 7.50503 1.51952 5.77216 2.8302C4.03929 4.14089 2.63577 5.83742 1.67297 7.78517L6.36401 11.401C6.9111 9.75122 7.96337 8.31544 9.3718 7.29698C10.7802 6.27852 12.4734 5.72901 14.2115 5.72628Z"
+          fill="#D94F3D"
+        ></path>
+        <path
+          stroke-width="0"
+          d="M5.94031 13.9975C5.94149 13.1148 6.08456 12.2381 6.36405 11.4009L1.67302 7.78516C0.713465 9.71546 0.214111 11.8418 0.214111 13.9975C0.214111 16.1531 0.713465 18.2794 1.67302 20.2098L6.36405 16.594C6.08456 15.7568 5.94149 14.8801 5.94031 13.9975Z"
+          fill="#F2C042"
+        ></path>
+        <path
+          stroke-width="0"
+          d="M27.6363 11.4525H14.2751V17.1787H21.8465C21.3961 18.7978 20.3641 20.1938 18.9484 21.0992L23.6031 24.6877C26.5776 22.018 28.3253 17.6769 27.6363 11.4525Z"
+          fill="#5085ED"
+        ></path>
+        <path
+          stroke-width="0"
+          d="M18.9464 21.0992C17.5079 21.9226 15.8679 22.3276 14.2115 22.2687C12.4734 22.2659 10.7802 21.7164 9.37179 20.698C7.96337 19.6795 6.9111 18.2437 6.36401 16.594L1.67297 20.2098C2.83167 22.5455 4.61907 24.5116 6.83416 25.8869C9.04924 27.2623 11.6041 27.9923 14.2115 27.9949C17.6423 28.0881 20.9865 26.9097 23.6012 24.6864L18.9464 21.0992Z"
+          fill="#57A75C"
+        ></path></svg
+      >Continue with Google
+    </button>
+  </body>
+</html>
+
+<script src="./scripts/signup.js"></script>

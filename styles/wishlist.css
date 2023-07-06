@@ -182,7 +182,7 @@ header {
   margin: auto;
 }
 #wishProducts {
-  width: 70%;
+  width: 65%;
   /* margin: auto; */
   margin-bottom: 10%;
   overflow-y: scroll;
@@ -206,7 +206,7 @@ header {
 }
 #wishProducts > div > div > button {
     height: 35px;
-    width: 100%;
+    width: 50%;
     margin-top: 5%; 
     background-color: #2f3337;
     color: white;
@@ -216,6 +216,23 @@ header {
     background-color: white;
     color: #2f3337;
     transition-duration: 0.5s;
+}
+
+.prod-price {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: left;
+}
+.prod-price > span {
+  margin-left: 10px;
+  font-size: 14px;
+  color: red;
+  font-weight: 700;
+}
+.prod-name {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 0;
 }
 #newsletter {
   background-color: rgb(245, 246, 247);
