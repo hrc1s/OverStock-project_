@@ -1,354 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>   
+<head>
+
     <title>Cart</title>
-    <style>
-        #empty{
-            width: 850.6px;
-            height: 80px;
-            border: 1px solid #dadcdf;
-            padding: 25px 40px;
-            margin: 20px 107px 0px 0px;
-            text-align: center;
-
-        }
-        #empty>p{
-            font-size: 24px;
-            font-weight: 400;
-            color: #2f3337;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-        }
-        h2{
-            font-size: 24px;
-            font-weight: 400;
-            margin: 0px 107px 0px;
-            color: #2f3337;
-        }
-        
-        .costing div:nth-child(1){ 
-            display: flex;   
-            border: 1px solid #dadcdf;
-            width: 280px;
-            height: 90px;
-            padding: 0px 0px 0px 0px;
-            margin: 0px 0px 0px 0px;
-            
-        }
-        button{
-            background-color: white;
-            border: 0px;
-            padding: 16px 0px 0px 0px;
-            margin: 0px 0px 0px 15px;
-            font-size: 18px;
-            font-weight: 700;     
-            color: #333333;      
-        }
-        .promocode{
-            width: 150px;
-            height: 40px;
-            background-color: transparent;
-            border: 1px solid  #333333;
-            border-radius: 4px;
-            color: #2f3337;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-            margin: 20px 0px 0px 0px;
-        }
-        .promocode+button{
-            width: 98px;
-            height: 45px;
-            background-color: transparent;
-            border: 1px solid #333333;
-            border-radius: 4px;
-            color: #2f3337;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-            margin: 20px 0px 0px 10px;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            
-            
-        }
-        .costing div:nth-child(2){
-            border: 1px solid #dadcdf;
-            width: 280px;
-            height: 150px;
-            
-            margin: 20px  0px 0px 0px;
-        }
-        p+button{
-            width: 220px;
-            height: 40px;
-            align-items: center;
-            background-color: #2f3337;
-            color: #fff;
-            border: 1px solid transparent;
-            border-radius: 4px;
-            padding: 0px 0px 0px 0px;
-            margin: 10px 0px 0px 22px;
-            font-size: 16px;
-            font-weight: 400;
-        }
-        
-        .costing div p:nth-child(1){
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            margin: 15px 0px 0px 22px;
-            color: #2f3337;
-        }
-        .costing div p:nth-child(2){
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            margin: -18px 0px 0px 200px ;
-            color: #2f3337;
-        }
-        .costing div p:nth-child(3){
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            margin: 15px 0px 0px 22px;
-            color: #2f3337;          
-        }
-        .costing div p:nth-child(4){
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            margin: -20px 0px 0px 150px ;
-            color: #2f3337;
-        }
-
-        img{
-            width: 24px;
-            height: 24px;
-            padding: 0px 0px 0px 0px;
-        }
-
-        #promo{
-            margin: 0px 0px 0px 8px; 
-            text-align: center;
-           
-            line-height: 1.42857143;
-        }
-        #things, #recent{
-            width: 931.6px;
-            display: flex;
-            gap: 10px;
-            margin: 0px 0px 0px 0px;
-        }
-        
-        #things div,#recent div{
-            width: 90%;
-           /* border: 1px dashed red; */
-            
-        }
-        #things div img, #recent div img{
-            width: 100%;
-            height: 200px;
-            border: 1px solid #dadcdf;
-        }
-        #things div button, #recent div button{
-            width: 100%;
-            font-size: 14px;
-            height: 34px;
-            font-weight: 400;
-            border: 1px solid transparent;
-            background-color: #fff;
-            border-color: #2f3337;
-            color: #2f3337;
-            border-radius: 4px;
-            justify-content: center;
-            margin: 10px 0px 0px 0px;
-            padding: 0px 10px 0px 0px;
-        }
-        #things div p:nth-child(3), #recent div p:nth-child(3){
-            font-size: 14px;
-            font-weight: 700;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            color: #ed0000!important;
-            
-        }
-        #things div p:nth-child(4), #recent div p:nth-child(4){
-            color: #545658;
-            font-size: 14px;
-            font-weight: 400;
-            width: 100%;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            margin: -10px 0px 0px 0px;
-        }
-        #things div p:nth-child(5), #recent div p:nth-child(5){
-            font-size: 12px;
-            font-weight: 400;
-            color: #545658;
-        }
-        #dummy+p{
-            font-size: 18px;
-            font-weight: 700;
-            color: #2f3337;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            margin: 40px 0px 15px 0px;
-        }
-        #things+p{
-            font-size: 18px;
-            font-weight: 700;
-            color: #2f3337;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            margin: 50px 0px 15px 0px;
-        }
-        .main{
-            align-items: center;
-            display: flex;
-            /*background-color: rgb(245,246, 247);*/
-            border: none;
-            cursor: pointer;
-            flex-direction: column;
-            margin: 50px 0px 0px 50%;
-            color: #444;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            background-color: #fff
-        }
-        .arrow {
-            align-items: center;
-            display: flex;
-            background-color: #f5f6f7;
-            border-radius: 50%;
-            height: 54px;
-            justify-content: center;
-            margin-bottom: 20px;
-            width: 54px
-        }
-
-        #rewardcontainer{
-            background: #f5f6f7;
-            width: 100%;
-            height: 137px;
-            margin: 40px 0px 0px 0px;
-        }
-        #rewardcontainer{
-            display: flex;
-            justify-content: center;
-            
-            
-        }
-        #rewardcontainer div>svg{
-            width: 130px;
-            margin: 0px 0px 0px 0px;
-        }
-        #rewardcontainer div>p{
-            height: 60px;
-            width: 365px;
-            margin: 50px 0px 0px 50px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: 400;
-            font: "Helvetica Neue",Helvetica,Arial,sans-serif;
-            color: #444;
-        }
-        #rewardcontainer div>p>span{
-            font-size: 20px;
-            font-weight: 700;
-            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        }
-        #rewardcontainer div>button{
-            width: 153px;
-            height: 44px;
-            font-size: 16px;
-            background-color: #fff;
-            font-weight: 400;
-            color: #2f3337;
-            align-items: center;
-            border: 1px solid #2f3337;
-            border-radius: 4px;
-            margin: 50px 0px 0px 10px;
-            padding: 0px 0px 0px 0px;
-        }
-
-       /*Style Cart Items*/
-        #cartitems{
-            width: 850.6px;
-            /*border: 1px dashed red;*/
-            padding: 25px 40px;
-            margin: -85px 107px 0px;
-        }
-        #cartitems>div{
-            width: 930.6px;
-            height: 300px;
-            display: flex;
-            /*grid-template-columns: repeat(1,1fr);*/
-            background: #fff;
-            border: 1px solid #dadcdf;
-            margin: 75px 0px 0px -147px;
-        }
-        #cartitems>div div:nth-child(1){
-            width: 300px;
-            height: 100%;
-        }
-        #cartitems>div div:nth-child(1)>img{
-            /*border: 1px solid green;*/
-            width: 300px;
-            height: 100%;
-        }
-
-        #cartitems>div div:nth-child(2){
-            width: 670px;
-            height: 100%;
-            /*border: 1px solid red; */
-            margin: 0px 0px 0px 20px;        
-        }
-        #cartitems>div div:nth-child(2)>p{
-            height: 30px;
-            color: #2f3337;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-        }
-        #cartitems>div div:nth-child(2)>h3{
-            margin: 25px 0px 0px 0px; 
-            color: #ed0000;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-        }
-        #cartitems>div div:nth-child(2)>h3+p{
-            height: 10px;
-        }
-        #cartitems>div div:nth-child(2)>button{
-            margin: 85px 0px 0px 0px;
-            color: #2f3337;
-            font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
-            font-size: 14px; 
-            font-weight: 400;
-        }
-        #cartitems>div div:nth-child(2)>button+button{
-            margin: 145px 0px 0px 28px;
-        }
-        #main2{
-            
-            height: 200px;
-            margin: 0px 0px 0px 0px;
-        }
-      #parent{
-        display: flex;
-        width: 1300px;
-        /*height: 1620px;*/
-        
-        margin: 0px 0px 0px 110px;       
-      }
-      
-      #sub2{
-        width: 280px;
-        height: 300px;
-        
-        margin: 16px 0px 0px -201px;
-      }
-      
-        
-       
-    </style>
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/product-details.css" />
 </head>
 <body>
+
+    <!-- navbar of cart page --> 
+    <header>
+        <div id="navbar">
+          <div>
+            <a href="index.html">
+              <img
+                id="logo"
+                src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+  
+          <nav>
+            <ul>
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">Outdoor</a></li>
+              <li><a href="#">Rugs</a></li>
+              <li><a href="#">Decor</a></li>
+              <li><a href="#">Bedding</a></li>
+              <li><a href="#">Home Improvement</a></li>
+              <li><a href="#">Kitchen</a></li>
+              <li><a href="#">Lighting</a></li>
+              <li><a href="#">Kids & Baby</a></li>
+              <li><a href="#">Bath</a></li>
+              <li><a href="#">More</a></li>
+              <li><a href="#">Ideas</a></li>
+            </ul>
+          </nav>
+  
+          <div id="btns">
+            <button class="dropdown-btn">
+              <img
+                id="user-img"
+                src="https://cdn-icons-png.flaticon.com/128/747/747376.png"
+                alt=""
+              />
+              <p>Acc</p>
+              <div class="dropdown-content">
+                <a href="signup.html">Login</a>
+                <a href="signup.html">Sign up</a>
+              </div>
+            </button>
+            <button>
+              <a href="wishlist.html">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+                  alt=""
+                />
+              </a>
+              <p>Fav</p>
+            </button>
+            <button>
+              <a href="cart.html"
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png"
+                  alt=""
+                />
+              </a>
+              <p>Cart<span id="cart-count">0</span></p>
+            </button>
+          </div>
+        </div>
+      </header>
+      <section id="productSection"></section>
+    <hr />
+
+
     <h2>Shopping Cart</h2>
 
     <div id="parent">
@@ -437,10 +164,47 @@
             </div>
     </div>
 
-    
+    <footer>
+        <div id="footer-upper">
+          <div>
+            <h3>MY ACCOUNT</h3>
+            <p>Orders & Returns</p>
+            <p>Email Preferences</p>
+            <p>Account Settings</p>
+          </div>
+          <div>
+            <h3>LET US HELP</h3>
+            <p>Contact Customer Care</p>
+            <p>Shipping Information</p>
+            <p>Return Policy</p>
+            <p>International Help</p>
+            <p>Accessibility</p>
+          </div>
+          <div>
+            <h3>COMPANY INFORMATION</h3>
+            <p>About Overstock™</p>
+            <p>Contact Us</p>
+            <p>Careers</p>
+            <p>Investor Relations</p>
+            <p>Sell Your Products</p>
+            <p>Supply Chain Transparency</p>
+          </div>
+          <div>
+            <h3>MORE WAYS TO SHOP</h3>
+            <p>Tips & Ideas</p>
+            <p>Deals</p>
+            <p>Clearance</p>
+            <p>New Arrivals</p>
+          </div>
+        </div>
+        <div id="footer-lower">
+          <div>© Copyright 2023, Overstock.com®</div>
+          <div>Privacy Policy Terms & Conditions *Promotion Terms</div>
+        </div>
+      </footer>
 
 </body>
 </html>
-<script src="./scripts/cart.js">
 
-</script>
+<script src="./scripts/cart.js"></script>
+<script src="./scripts/product-details.js"></script>

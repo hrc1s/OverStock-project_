@@ -568,10 +568,29 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  #footer-upper {
+    flex-direction: column;
+  }
+  /* #footer-upper > div {
+    padding: 10%;
+  } */
+  #footer-lower {
+    padding: 30px;
+  }
 }
 @media screen and (min-width: 646px) and (max-width: 900px) {
   .lt_deals_container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #footer-upper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #footer-upper > div {
+    padding: 10%;
+  }
+  #footer-lower {
+    padding: 30px;
   }
 }
 @media screen and (max-width: 1022px) {
