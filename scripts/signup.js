@@ -19,28 +19,7 @@ var form = document.querySelector("form").addEventListener("submit", function(){
     }
     
 }); 
-// function signup(){
-//     event.preventDefault();
-//     var email = document.getElementById('email').value;
-//     var pass = document.getElementById('password').value;
-//     var user = {
-//         email: email,
-//         password: pass, 
-//     };
 
-//     var json = JSON.stringify(user);
-//     localStorage.setItem(username, json);
-//     console.log("user added");
-// }
-
-// function login(){
-//     event.preventDefault();
-//     var e = document.getElementsByClassName('Email').value;
-//     var p = document.getElementsByClassName('Password').value;
-//     var user = localStorage.getItem(username);
-//     var data = JSON.parse(user);
-//     console.log(data);
-// }
 var from= document.querySelector("#form2").addEventListener("submit", function(){
     event.preventDefault();
     var arr = JSON.parse(localStorage.getItem("accInfo")) || [];
@@ -59,11 +38,61 @@ var from= document.querySelector("#form2").addEventListener("submit", function()
     event.target.reset();
 
 })
+// ---------------------------------------------------------------------------------------
+
+// // Register form submission
+//     document.getElementById('register-form').addEventListener('submit', function(event) {
+//       event.preventDefault();
+      
+//       var email = document.getElementById('email').value;
+//       var password = document.getElementById('password').value;
+
+//       if (email === '' || password === '') {
+//         alert('Please fill in the credentials');
+//       } else {
+//         var existingAccounts = JSON.parse(localStorage.getItem('accInfo')) || [];
+//         var account = {
+//           email: email,
+//           password: password
+//         };
+
+//         existingAccounts.push(account);
+//         localStorage.setItem('accInfo', JSON.stringify(existingAccounts));
+//         event.target.reset();
+//         alert('Account Created');
+//       }
+//     });
+
+//     // Login form submission
+//     document.getElementById('login-form').addEventListener('submit', function(event) {
+//       event.preventDefault();
+      
+//       var email = document.getElementById('login-email').value;
+//       var password = document.getElementById('login-password').value;
+
+//       var existingAccounts = JSON.parse(localStorage.getItem('accInfo')) || [];
+//       var isLoggedIn = false;
+
+//       for (var i = 0; i < existingAccounts.length; i++) {
+//         if (email === existingAccounts[i].email && password === existingAccounts[i].password) {
+//           isLoggedIn = true;
+//           break;
+//         }
+//       }
+
+//       if (isLoggedIn) {
+//         alert('Logged in Successfully');
+//         window.location.href = 'index.html';
+//       } else {
+//         alert('Wrong Credentials');
+//       }
+
+//       event.target.reset();
+//     });
+
 
 
 
 
 
     
-    // let Email = document.getElementsByClassName("Email").value; 
-    // let Pass = document.getElementsByClassName("Password").value;

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/user-add.css' rel='stylesheet'>
-    <title>Sign Up</title>
+    <meta property="og:image" content="https://ak1.ostkcdn.com/img/mxc/flag-logo-fix060120.png">
+    <title>Overstock.com | The Best Deals Online: Furniture, Bedding, Rugs, Kitchen Essentials & More</title>
 </head>
 <style>
 
@@ -28,6 +29,7 @@
         width: 70%;
         margin: auto;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     .vl {
         border-left: 2px solid #DBDCDE;
@@ -94,7 +96,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding-top: 50px;
+        padding-top: 6px;
         font-family: Helvetica,Arial,sans-serif;
     }
     .terms a{
@@ -109,8 +111,8 @@
         align-items: center;
         display: flex;
         justify-content: center;
-        margin: 8px 0 32px;
-        padding: 20px;
+        margin: 8px 0 22px;
+        padding: 15px;
     }
     .av .ax {
         background-color: gray;
@@ -123,9 +125,12 @@
         margin: 0 24px;
     }
     .google{
+        display: flex;
+        flex-wrap: wrap;
         width: 25%;
-        margin-left: 500px;
-        margin-bottom: 20px;
+        margin: auto;
+        /* margin-left: 500px;
+        margin-bottom: 10px; */
         font-size: 16px;
         height: 44px;
         justify-content: center;
@@ -134,7 +139,34 @@
         border-color: #2f3337;
         color: #2f3337;
     }
-    
+    .facebook{
+        display: flex;
+        flex-wrap: wrap;
+        width: 25%;
+        margin: auto;
+        /* margin-left: 500px;
+        margin-bottom: 20px; */
+        font-size: 16px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+        background: #1877f2!important;
+        color: #fff!important;
+        border-color: #2f3337;
+    }
+    @media (max-width: 995px){
+        .google{
+            color: white;
+        }
+    }
+    @media (max-width: 730px){
+        .vl {
+            display: none;
+        }
+        #main{
+            display:block;
+        }
+    }
 
 </style>
 <body>
@@ -211,7 +243,8 @@
         <div class="az">OR</div>
         <div class="ax"></div>
     </div>
-    <button type="button" class="google" data-cl-tracking="button_5.5.1"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" class="fj"><path stroke-width="0" d="M14.2115 5.72628C16.1549 5.72509 18.036 6.41187 19.5216 7.66492L23.6826 3.70239C22.0853 2.22954 20.1667 1.14926 18.079 0.547287C15.9913 -0.0546857 13.7921 -0.161782 11.6558 0.234497C9.51954 0.630776 7.50503 1.51952 5.77216 2.8302C4.03929 4.14089 2.63577 5.83742 1.67297 7.78517L6.36401 11.401C6.9111 9.75122 7.96337 8.31544 9.3718 7.29698C10.7802 6.27852 12.4734 5.72901 14.2115 5.72628Z" fill="#D94F3D"></path><path stroke-width="0" d="M5.94031 13.9975C5.94149 13.1148 6.08456 12.2381 6.36405 11.4009L1.67302 7.78516C0.713465 9.71546 0.214111 11.8418 0.214111 13.9975C0.214111 16.1531 0.713465 18.2794 1.67302 20.2098L6.36405 16.594C6.08456 15.7568 5.94149 14.8801 5.94031 13.9975Z" fill="#F2C042"></path><path stroke-width="0" d="M27.6363 11.4525H14.2751V17.1787H21.8465C21.3961 18.7978 20.3641 20.1938 18.9484 21.0992L23.6031 24.6877C26.5776 22.018 28.3253 17.6769 27.6363 11.4525Z" fill="#5085ED"></path><path stroke-width="0" d="M18.9464 21.0992C17.5079 21.9226 15.8679 22.3276 14.2115 22.2687C12.4734 22.2659 10.7802 21.7164 9.37179 20.698C7.96337 19.6795 6.9111 18.2437 6.36401 16.594L1.67297 20.2098C2.83167 22.5455 4.61907 24.5116 6.83416 25.8869C9.04924 27.2623 11.6041 27.9923 14.2115 27.9949C17.6423 28.0881 20.9865 26.9097 23.6012 24.6864L18.9464 21.0992Z" fill="#57A75C"></path></svg>Continue with Google</button>
+    <button type="button" class="google" data-cl-tracking="button_5.5.1"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" class="fj"><path stroke-width="0" d="M14.2115 5.72628C16.1549 5.72509 18.036 6.41187 19.5216 7.66492L23.6826 3.70239C22.0853 2.22954 20.1667 1.14926 18.079 0.547287C15.9913 -0.0546857 13.7921 -0.161782 11.6558 0.234497C9.51954 0.630776 7.50503 1.51952 5.77216 2.8302C4.03929 4.14089 2.63577 5.83742 1.67297 7.78517L6.36401 11.401C6.9111 9.75122 7.96337 8.31544 9.3718 7.29698C10.7802 6.27852 12.4734 5.72901 14.2115 5.72628Z" fill="#D94F3D"></path><path stroke-width="0" d="M5.94031 13.9975C5.94149 13.1148 6.08456 12.2381 6.36405 11.4009L1.67302 7.78516C0.713465 9.71546 0.214111 11.8418 0.214111 13.9975C0.214111 16.1531 0.713465 18.2794 1.67302 20.2098L6.36405 16.594C6.08456 15.7568 5.94149 14.8801 5.94031 13.9975Z" fill="#F2C042"></path><path stroke-width="0" d="M27.6363 11.4525H14.2751V17.1787H21.8465C21.3961 18.7978 20.3641 20.1938 18.9484 21.0992L23.6031 24.6877C26.5776 22.018 28.3253 17.6769 27.6363 11.4525Z" fill="#5085ED"></path><path stroke-width="0" d="M18.9464 21.0992C17.5079 21.9226 15.8679 22.3276 14.2115 22.2687C12.4734 22.2659 10.7802 21.7164 9.37179 20.698C7.96337 19.6795 6.9111 18.2437 6.36401 16.594L1.67297 20.2098C2.83167 22.5455 4.61907 24.5116 6.83416 25.8869C9.04924 27.2623 11.6041 27.9923 14.2115 27.9949C17.6423 28.0881 20.9865 26.9097 23.6012 24.6864L18.9464 21.0992Z" fill="#57A75C"></path></svg>Continue with Google</button><br>
+    <button type="button" class="facebook" data-cl-tracking="button_5.5.1"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" class="eu"><path d="M14.5 28C22.232 28 28.5 21.732 28.5 14C28.5 6.26801 22.232 0 14.5 0C6.76801 0 0.5 6.26801 0.5 14C0.5 21.732 6.76801 28 14.5 28Z" fill="white"></path><path stroke="#1877F2" stroke-width="1.25" d="M19.9497 18.0466L20.5705 14H16.6877V11.3741C16.6877 10.2669 17.23 9.18767 18.969 9.18767H20.7343V5.74245C19.6978 5.57472 18.6505 5.48317 17.6007 5.46854C14.4026 5.46854 12.3124 7.40662 12.3124 10.9158V14H8.75757V18.0466H12.3124V27.8296C13.7619 28.0568 15.2381 28.0568 16.6877 27.8296V18.0466H19.9497Z" fill="#1877F2"></path></svg>Continue with Facebook</button>
        
     
 </body>
