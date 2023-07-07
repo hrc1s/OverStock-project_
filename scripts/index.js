@@ -427,6 +427,18 @@ console.log(cartList);
 let cartCount = document.getElementById("cart-count");
 cartCount.textContent = localStorage.getItem("cart-count") || 0;
 
+
+let nsForm = document.querySelector("#newsletterForm");
+
+nsForm.addEventListener("submit", function () {
+  // event.preventDefault();
+  let email = nsForm.email.value;
+  if (email == "") {
+    alert("Cannot be empty");
+  } else {
+    alert(`Your email: ${email}, has been saved.`);
+  }
+});
 // let selectedCategoryList = JSON.parse(localStorage.getItem("selected-category")) || [];
 
 let sofaButton = document.getElementById("sofas");

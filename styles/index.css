@@ -465,22 +465,60 @@ button:hover {
   cursor: pointer;
 }
 
+#newsletter {
+  background-color: rgb(245, 246, 247);
+  /* height: 100px; */
+  padding-top: 4%;
+  margin-top: 5%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.container > div {
+  width: 20%;
+}
+.container > div > h3 {
+  text-align: center;
+  margin: 0px;
+}
+
+#newsletterForm > input {
+  height: 35px;
+}
+#newsletterForm > input ~ input {
+  background-color: #333;
+  color: white;
+  width: 100px;
+}
+#newsletterForm > input ~ input:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
 /* Footer starts here */
 #footer-upper {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   background-color: #545658;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   justify-content: space-between;
+  padding: 10px 15px;
 }
-#footer-upper div {
+#footer-upper > div {
   color: white;
-  padding: 50px 100px;
+  /* padding: 50px 100px; */
+  width: 90%;
+  /* margin: auto; */
 }
 #footer-upper h3,
 #footer-upper p {
   color: white;
-  font-weight: lighter;
 }
 #footer-lower {
   background-color: #2f3337;
@@ -488,7 +526,6 @@ button:hover {
   padding: 50px;
   display: flex;
   justify-content: space-evenly;
-  z-index: 20;
 }
 /* Footer ends here */
 @media screen and (min-width: 800px) and (max-width: 1200px) {
@@ -497,14 +534,14 @@ button:hover {
   }
   #footer-upper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  #footer-upper div:last-child {
+  /* #footer-upper div:last-child {
     display: none;
   }
   #footer-lower div:last-child {
     display: none;
-  }
+  } */
 
   .swiper-slide h2,
   .swiper-slide p {
@@ -525,9 +562,9 @@ button:hover {
   #footer-upper div:nth-child(3) {
     display: none;
   } */
-  .container > div {
+  /* .container > div {
     width: 100%;
-  }
+  } */
   #footer-upper {
     flex-direction: column;
   }
@@ -542,14 +579,24 @@ button:hover {
   #footer-upper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 0px;
+    /* padding: 0px; */
   }
-  #footer-upper div:last-child,
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  #newsletter {
+    height: 250px;
+  }
+  .container > div {
+    width: 100%;
+  }
+  /* #footer-upper div:last-child,
   #footer-upper div:nth-child(2),
   #footer-upper div:nth-child(3) {
     display: none;
     padding: 0px;
-  }
+  } */
   #footer-lower div:last-child {
     display: none;
   }

@@ -389,6 +389,18 @@ title.textContent = selectedProduct.name;
 let parentProduct = document.getElementById("productSection");
 let parentCategory = document.getElementById("sameCategory");
 
+let nsForm = document.querySelector("#newsletterForm");
+
+nsForm.addEventListener("submit", function () {
+  // event.preventDefault();
+  let email = nsForm.email.value;
+  if (email == "") {
+    alert("Cannot be empty");
+  } else {
+    alert(`Your email: ${email}, has been saved.`);
+  }
+});
+
 function displayProduct(product) {
   parentProduct.innerHTML = "";
   let display = document.createElement("div");
