@@ -427,11 +427,10 @@ console.log(cartList);
 let cartCount = document.getElementById("cart-count");
 cartCount.textContent = localStorage.getItem("cart-count") || 0;
 
+// let selectedCategoryList = JSON.parse(localStorage.getItem("selected-category")) || [];
+
 let sofaButton = document.getElementById("sofas");
 console.log(sofaButton)
-
-let selectedCategoryList = JSON.parse(localStorage.getItem("selected-category")) || [];
-
 sofaButton.addEventListener("click", function() {
     var selectedCategory = all_products.filter(function(el) {
         return el.category === sofaButton.id;
@@ -440,7 +439,37 @@ sofaButton.addEventListener("click", function() {
     window.location.href = "products.html"
 });
 
-console.log(selectedCategoryList)
+let bedButton = document.getElementById("bed");
+console.log(bedButton)
+bedButton.addEventListener("click", function() {
+    var selectedCategory = all_products.filter(function(el) {
+        return el.category === bedButton.id;
+    });
+    localStorage.setItem("selected-category", JSON.stringify(selectedCategory));
+    window.location.href = "products.html"
+});
+
+let kitchenButton = document.getElementById("kitchen");
+console.log(kitchenButton)
+kitchenButton.addEventListener("click", function() {
+    var selectedCategory = all_products.filter(function(el) {
+        return el.category === kitchenButton.id;
+    });
+    localStorage.setItem("selected-category", JSON.stringify(selectedCategory));
+    window.location.href = "products.html"
+});
+
+let patioButton = document.getElementById("patio");
+console.log(patioButton)
+patioButton.addEventListener("click", function() {
+    var selectedCategory = all_products.filter(function(el) {
+        return el.category === patioButton.id;
+    });
+    localStorage.setItem("selected-category", JSON.stringify(selectedCategory));
+    window.location.href = "products.html"
+});
+
+// console.log(selectedCategoryList)
 
 console.log(products)
   display(products);
@@ -535,7 +564,7 @@ console.log(products)
             category: el.category,
           })
         );
-        window.location.href = "scripts/product-details.html";
+        window.location.href = "product-details.html";
         console.log(localStorage.getItem("selected-product"));
       });
   

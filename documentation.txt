@@ -7,4 +7,6 @@ KEYS FOR ACCESSING DATA FROM THE LOCAL STORAGE.
 
 3. Selected Product = selected-product -> This gets the data of a single product.
 
-4. All Products = all-products -> Gets all the products
+4. All Products = all-products -> Gets all the products.
+
+5. Cart Count = cart-count -> The data that represents the number of elements in the cart
