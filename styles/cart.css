@@ -46,17 +46,19 @@ button{
     border-radius: 4px;
     color: #2f3337;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 5px;
+    padding: 5px 0px 0px 10px;
 }
 .promocode+button{
     width: 98px;
-    height: 45px;
+    height: 48px;
     background-color: transparent;
     border: 1px solid #333333;
     border-radius: 4px;
     color: #2f3337;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     margin: 20px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -95,7 +97,7 @@ p+button{
     font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 14px;
     font-weight: 700;
-    margin: -18px 0px 0px 200px ;
+    margin: -18px 0px 0px 150px ;
     color: #2f3337;
 }
 .costing div p:nth-child(3){
@@ -109,7 +111,7 @@ p+button{
     font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 20px;
     font-weight: 700;
-    margin: -20px 0px 0px 150px ;
+    margin: -23px 0px 0px 150px ;
     color: #2f3337;
 }
 
@@ -269,9 +271,9 @@ img{
 }
 #cartitems>div{
     width: 930.6px;
-    height: 300px;
-    display: flex;
-    /*grid-template-columns: repeat(1,1fr);*/
+    height: 220px;
+    /*display: flex;*/
+    grid-template-columns: repeat(1,1fr);
     background: #fff;
     border: 1px solid #dadcdf;
     margin: 75px 0px 0px -147px;
@@ -290,7 +292,7 @@ img{
     width: 670px;
     height: 100%;
     /*border: 1px solid red; */
-    margin: 0px 0px 0px 20px;        
+    margin:-230px 0px 0px 320px;     
 }
 #cartitems>div div:nth-child(2)>p{
     height: 30px;
@@ -310,14 +312,15 @@ img{
     height: 10px;
 }
 #cartitems>div div:nth-child(2)>button{
-    margin: 85px 0px 0px 0px;
+    margin: 30px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     color: #2f3337;
     font-family: HelveticaNeue,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: 14px; 
     font-weight: 400;
 }
 #cartitems>div div:nth-child(2)>button+button{
-    margin: 145px 0px 0px 28px;
+    margin: 75px 0px 0px 28px;
 }
 #main2{
     
@@ -332,9 +335,30 @@ width: 1300px;
 margin: 0px 0px 0px 110px;       
 }
 
+
 #sub2{
 width: 280px;
 height: 300px;
 
 margin: 16px 0px 0px -201px;
 }
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+    #things{
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    #recent{
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    #cartitems>div{
+        
+       width: 533px;
+    }
+    #cartitems>div div:nth-child(2) {
+        width: 200px;
+    }
+} 
