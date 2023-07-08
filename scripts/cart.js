@@ -83,79 +83,88 @@ console.log(cartList);
 let cartCount = document.getElementById("cart-count");
 cartCount.textContent = localStorage.getItem("cart-count") || 0;
 function addthings(array) {
-  thingsdiv.innerHTML = "";
-  var counter = 0;
-
-  array.forEach(function (el) {
-    if (counter < 4) {
-      let card = document.createElement("div");
-      let prodImg = document.createElement("img");
-      let prodPrice = document.createElement("p");
-      let prodName = document.createElement("p");
-      let atcBtn = document.createElement("button");
-      let off = document.createElement("span");
-
-      prodName.setAttribute("class", "prod-name");
-      prodPrice.setAttribute("class", "prod-price");
-
-      prodImg.setAttribute("src", el.img);
-      prodPrice.textContent = parseFloat(el.price).toLocaleString("en-US", {
-        style: "currency",
-        currency: "INR",
-      });
-      prodName.textContent = el.name;
-      atcBtn.textContent = "Add to cart";
-      off.textContent = "10%OFF";
-
-      // if (el.category == "sofas") {
-      //   prodPrice.append(off);
-      // }
-
-      atcBtn.addEventListener("click", function () {
-        cartList.push(el);
-        console.log(cartList.length);
-        localStorage.setItem("cart-list", JSON.stringify(cartList));
-        atcBtn.textContent = "Added!";
-        atcBtn.style.backgroundColor = "green";
-        atcBtn.style.color = "white";
-        cartCount.textContent++;
-        localStorage.setItem("cart-count", cartCount.textContent);
-
-        setTimeout(function () {
-          atcBtn.textContent = "Add to Cart";
-          atcBtn.style.backgroundColor = "";
-          atcBtn.style.color = "";
-          atcBtn.style.transitionDuration = "0.5s";
-        }, 2000);
-        window.location.reload()
-      });
-
-      prodImg.addEventListener("click", function () {
-        localStorage.setItem(
-          "selected-product",
-          JSON.stringify({
-            img: el.img,
-            id: el.id,
-            name: el.name,
-            description: el.description,
-            price: el.price,
-            category: el.category,
-          })
-        );
-        window.location.href = "product-details.html";
-        console.log(localStorage.getItem("selected-product"));
-      });
-
-      card.append(prodImg, prodPrice, prodName, atcBtn);
-      thingsdiv.append(card);
-
-      counter++;
-    } else {
-      // Break out of the loop if four items have been added
-      return;
+    thingsdiv.innerHTML = "";
+    var counter = 0;
+  
+    // Fisher-Yates shuffle algorithm
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
     }
-  });
-}
+  
+    array.forEach(function (el) {
+      if (counter < 4) {
+        let card = document.createElement("div");
+        let prodImg = document.createElement("img");
+        let prodPrice = document.createElement("p");
+        let prodName = document.createElement("p");
+        let atcBtn = document.createElement("button");
+        let off = document.createElement("span");
+  
+        prodName.setAttribute("class", "prod-name");
+        prodPrice.setAttribute("class", "prod-price");
+  
+        prodImg.setAttribute("src", el.img);
+        prodPrice.textContent = parseFloat(el.price).toLocaleString("en-US", {
+          style: "currency",
+          currency: "INR",
+        });
+        prodName.textContent = el.name;
+        atcBtn.textContent = "Add to cart";
+        off.textContent = "10%OFF";
+  
+        // if (el.category == "sofas") {
+        //   prodPrice.append(off);
+        // }
+  
+        atcBtn.addEventListener("click", function () {
+          cartList.push(el);
+          console.log(cartList.length);
+          localStorage.setItem("cart-list", JSON.stringify(cartList));
+          atcBtn.textContent = "Added!";
+          atcBtn.style.backgroundColor = "green";
+          atcBtn.style.color = "white";
+          cartCount.textContent++;
+          localStorage.setItem("cart-count", cartCount.textContent);
+  
+          setTimeout(function () {
+            atcBtn.textContent = "Add to Cart";
+            atcBtn.style.backgroundColor = "";
+            atcBtn.style.color = "";
+            atcBtn.style.transitionDuration = "0.5s";
+          }, 2000);
+          window.location.reload();
+        });
+  
+        prodImg.addEventListener("click", function () {
+          localStorage.setItem(
+            "selected-product",
+            JSON.stringify({
+              img: el.img,
+              id: el.id,
+              name: el.name,
+              description: el.description,
+              price: el.price,
+              category: el.category,
+            })
+          );
+          window.location.href = "product-details.html";
+          console.log(localStorage.getItem("selected-product"));
+        });
+  
+        card.append(prodImg, prodPrice, prodName, atcBtn);
+        thingsdiv.append(card);
+  
+        counter++;
+      } else {
+        // Break out of the loop if four items have been added
+        return;
+      }
+    });
+  }
+  
 var cartitem = document.querySelector("#cartitems");
 //console.log(cartList);
 var emptydiv = document.querySelector("#empty");
