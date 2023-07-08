@@ -361,4 +361,180 @@ const products = [
   },
 ];
 
-console.log(products)
+let selectedProduct = JSON.parse(localStorage.getItem("selected-product"));
+console.log(selectedProduct.category);
+
+let cartList = JSON.parse(localStorage.getItem("cart-list")) || [];
+console.log(cartList);
+
+let wishList = JSON.parse(localStorage.getItem("wish-list")) || [];
+console.log(wishList);
+
+let cartCount = document.getElementById("cart-count");
+cartCount.textContent = localStorage.getItem("cart-count") || 0;
+
+
+window.addEventListener("load", function () {
+  displayProduct(selectedProduct);
+
+  let filteredProducts = products.filter(function (el) {
+    return el.category == selectedProduct.category;
+  });
+  displayCategory(filteredProducts);
+});
+
+let title = document.querySelector("title");
+title.textContent = selectedProduct.name;
+
+let parentProduct = document.getElementById("productSection");
+let parentCategory = document.getElementById("sameCategory");
+
+let nsForm = document.querySelector("#newsletterForm");
+
+nsForm.addEventListener("submit", function () {
+  // event.preventDefault();
+  let email = nsForm.email.value;
+  if (email == "") {
+    alert("Cannot be empty");
+  } else {
+    alert(`Your email: ${email}, has been saved.`);
+  }
+});
+
+function displayProduct(product) {
+  parentProduct.innerHTML = "";
+  let display = document.createElement("div");
+  let imgSection = document.createElement("div");
+  let detailsSection = document.createElement("div");
+  let prodImg = document.createElement("img");
+  let prodPrice = document.createElement("h3");
+  let addToCart = document.createElement("button");
+  let addToWish = document.createElement("button");
+  let prodName = document.createElement("h1");
+  let prodDescription = document.createElement("p");
+  let description = document.createElement("h5");
+  let off = document.createElement("span");
+
+  prodImg.setAttribute("src", product.img);
+  prodPrice.textContent = parseFloat(product.price).toLocaleString("en-US", {
+    style: "currency",
+    currency: "INR",
+  });
+  addToCart.textContent = "Add To Cart";
+  prodName.textContent = product.name;
+  prodDescription.textContent = product.description;
+  off.textContent = "10%OFF - SOFA10";
+  description.textContent = "Description";
+  description.style.fontSize = "18px";
+  description.style.marginBottom = "0";
+
+  // if (product.category == "sofa") {
+  //   prodPrice.append(off);
+  // }
+
+  addToCart.addEventListener("click", function () {
+    cartList.push(product);
+    console.log(cartList.length);
+    localStorage.setItem("cart-list", JSON.stringify(cartList));
+    addToCart.textContent = "Added!";
+    addToCart.style.backgroundColor = "green";
+    addToCart.style.color = "white";
+    cartCount.textContent++;
+    localStorage.setItem("cart-count", cartCount.textContent)
+    setTimeout(function () {
+      addToCart.textContent = "Add to Cart";
+      addToCart.style.backgroundColor = "";
+      addToCart.style.color = "";
+      addToCart.style.transitionDuration = "0.5s";
+    }, 2000);
+  });
+
+  addToWish.textContent = "Add to Wishlist";
+  addToWish.style.backgroundColor = "white";
+  addToWish.style.color = "black";
+  addToWish.style.marginTop = "10px";
+
+  addToWish.addEventListener("click", function () {
+    wishList.push(product);
+    console.log(wishList.length);
+    localStorage.setItem("wish-list", JSON.stringify(wishList));
+    addToWish.textContent = "Added!";
+  });
+
+  display.append(imgSection, detailsSection);
+  imgSection.append(prodImg);
+  detailsSection.append(
+    prodName,
+    prodPrice,
+    addToCart,
+    addToWish,
+    description,
+    prodDescription
+  );
+  parentProduct.append(display);
+}
+
+function displayCategory(arr) {
+  parentCategory.innerHTML = "";
+  arr.forEach(function (el) {
+    let card = document.createElement("div");
+    let prodImg = document.createElement("img");
+    let prodPrice = document.createElement("p");
+    let prodName = document.createElement("p");
+    let addToCart = document.createElement("button");
+    // let off = document.createElement("span");
+
+    prodName.setAttribute("class", "prod-name");
+    prodPrice.setAttribute("class", "prod-price");
+    // console.log(el);
+    prodImg.setAttribute("src", el.img);
+    prodPrice.textContent = parseFloat(el.price).toLocaleString("en-US", {
+      style: "currency",
+      currency: "INR",
+    });
+    prodName.textContent = el.name;
+    addToCart.textContent = "Add to cart";
+    // off.textContent = "10%OFF";
+
+    // if (el.category == "sofa") {
+    //   prodPrice.append(off);
+    // }
+
+    addToCart.addEventListener("click", function (el) {
+      cartList.push(el);
+      console.log(cartList.length);
+      localStorage.setItem("cart-list", JSON.stringify(cartList));
+      addToCart.textContent = "Added!";
+      addToCart.style.backgroundColor = "green";
+      addToCart.style.color = "white";
+      cartCount.textContent++;
+      localStorage.setItem("cart-count", cartCount.textContent);
+
+      setTimeout(function () {
+        addToCart.textContent = "Add to Cart";
+        addToCart.style.backgroundColor = "";
+        addToCart.style.color = "";
+        addToCart.style.transitionDuration = "0.5s";
+      }, 2000);
+    });
+
+    prodImg.addEventListener("click", function () {
+      localStorage.setItem(
+        "selected-product",
+        JSON.stringify({
+          img: el.img,
+          id: el.id,
+          name: el.name,
+          description: el.description,
+          price: el.price,
+          category: el.category,
+        })
+      );
+      window.location.href = "product-details.html";
+      console.log(localStorage.getItem("selected-product"));
+    });
+
+    card.append(prodImg, prodPrice, prodName, addToCart);
+    parentCategory.append(card);
+  });
+}
