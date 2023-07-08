@@ -1,4 +1,4 @@
-All 20 products' data is saved in the data.js file divided into 4 categories.
+All 40 products' data is saved in the data.js file divided into 4 categories.
 
 KEYS FOR ACCESSING DATA FROM THE LOCAL STORAGE.
 1. Cart Items = cart-list -> The items that are present in the cart.

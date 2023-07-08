@@ -1,5 +1,12 @@
 const cardNumberInput = document.getElementById("card_num");
+let totalAmount = localStorage.getItem("Totalamount") || 0; 
 
+console.log(totalAmount)
+let total = document.getElementById("total");
+total.textContent = `Total : ${parseFloat(totalAmount.replace(/[^\d.-]/g, "")).toLocaleString("en-US", {
+  style: "currency",
+  currency: "INR"
+})} `;
 cardNumberInput.addEventListener("input", function (e) {
   const input = e.target.value.replace(/\D/g, " ").substring(0, 16);
   const cardNumber = input.replace(/(\d{16})(?=\d)/g, " ");

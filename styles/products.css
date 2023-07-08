@@ -232,15 +232,19 @@ header {
 }
 #products > div > button {
   margin-top: auto;
-  background-color: black;
   height: 35px;
-  color: white;
   font-weight: 600;
   cursor: pointer;
+  border: 1px solid transparent;
+  background-color: #2f3337;
+  border-color: #2f3337;
+  color: #fff;
+  border-radius: 4px;
+  justify-content: center;
 }
 #products > div > button:hover {
   background-color: white;
-  color: black;
+  color: #2f3337;
   transition-duration: 0.5s;
 }
 .prod-price {

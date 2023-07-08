@@ -463,9 +463,9 @@ function displayProducts(arr) {
     atcBtn.textContent = "Add to cart";
     off.textContent = "10%OFF";
 
-    if (el.category == "sofas") {
-      prodPrice.append(off);
-    }
+    // if (el.category == "sofas") {
+    //   prodPrice.append(off);
+    // }
 
     atcBtn.addEventListener("click", function () {
       cartList.push(el);
