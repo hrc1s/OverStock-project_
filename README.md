@@ -1,1 +1,17 @@
 # OverStock-project_
+
+All 40 products' data is saved in the data.js file divided into 4 categories.
+
+KEYS FOR ACCESSING DATA FROM THE LOCAL STORAGE.
+1. Cart Items = cart-list -> The items that are present in the cart.
+
+2. Selected Category = selected-category -> This gets the data of the desired category.
+
+3. Selected Product = selected-product -> This gets the data of a single product.
+
+4. All Products = all-products -> Gets all the products.
+
+5. Cart Count = cart-count -> The data that represents the number of elements in the cart
+
+VIEW THE SITE HERE
+https://64a93904803f816b0be0bd67--celebrated-sawine-15cb97.netlify.app/index.html
