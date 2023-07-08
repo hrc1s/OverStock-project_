@@ -373,7 +373,6 @@ console.log(wishList);
 let cartCount = document.getElementById("cart-count");
 cartCount.textContent = localStorage.getItem("cart-count") || 0;
 
-
 window.addEventListener("load", function () {
   displayProduct(selectedProduct);
 
@@ -440,7 +439,7 @@ function displayProduct(product) {
     addToCart.style.backgroundColor = "green";
     addToCart.style.color = "white";
     cartCount.textContent++;
-    localStorage.setItem("cart-count", cartCount.textContent)
+    localStorage.setItem("cart-count", cartCount.textContent);
     setTimeout(function () {
       addToCart.textContent = "Add to Cart";
       addToCart.style.backgroundColor = "";
@@ -500,7 +499,7 @@ function displayCategory(arr) {
     //   prodPrice.append(off);
     // }
 
-    addToCart.addEventListener("click", function (el) {
+    addToCart.addEventListener("click", function () {
       cartList.push(el);
       console.log(cartList.length);
       localStorage.setItem("cart-list", JSON.stringify(cartList));
