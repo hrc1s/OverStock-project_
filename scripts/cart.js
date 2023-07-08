@@ -207,8 +207,12 @@ function updateDOM(cartList) {
     if (promocodeinput.value === "OverStock10") {
       //giving 10% static discount
       var carttotal = document.querySelector("#cartTotal");
-      carttotal.textContent = `₹${(total - (total * 0.1)).toFixed(2)}`;
-      localStorage.setItem("Totalamount", JSON.stringify(total));
+      carttotal.textContent = `${parseFloat(total - (total * 0.1)).toLocaleString("en-US", {
+        style: "currency",
+        currency: "INR"
+      })}`;
+      console.log(total-(total *0.1))
+      localStorage.setItem("Totalamount", total-(total *0.1));
     }
     else {
       alert("Invalid Code")
@@ -222,7 +226,7 @@ function updateDOM(cartList) {
       //giving 10% static discount
       var carttotal = document.querySelector("#cartTotal");
       carttotal.textContent = total - (total * 0.1).toFixed(2);
-      localStorage.setItem("Totalamount", JSON.stringify(total));
+      localStorage.setItem("Totalamount", total-(total *0.1));
     }
     if (cartList.length == 0) {
       alert("Not buying anything?");
@@ -248,7 +252,10 @@ function updateDOM(cartList) {
 
     Cimg.setAttribute("src", element.img);
     Cname.textContent = element.name;
-    Cprice.textContent = "₹" + element.price;
+    Cprice.textContent = parseFloat(element.price).toLocaleString("en-US", {
+      style: "currency",
+      currency: "INR"
+    });
 
     Cremovebtn.textContent = "Remove";
     Cremovebtn.addEventListener("click", function () {
